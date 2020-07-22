@@ -1,6 +1,10 @@
 <?php
  $path = 'demo.txt';
  $fp = @fopen($path, "r");
+ //r: read only
+ //r+: read+write
+ //w: write only
+ //w+: write+read
 
  //kiem tra file mo thanh cong khong
  if(!$fp){
@@ -18,7 +22,11 @@
    //doc het file
    $data = fread($fp, filesize('demo.txt'));
    echo $data;
-
   }
+  fclose($fp);
+
+  
+
+
  }
 ?>
