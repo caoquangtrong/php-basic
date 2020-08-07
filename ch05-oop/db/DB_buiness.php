@@ -29,7 +29,7 @@
         }
 
         //ham cao cap nhat theo id
-        function update_by_id($id){
+        function update_by_id($data, $id){
             return $this->update($this->_table_name, $data, $this->_key.'='.(int)$id);
         }
 
